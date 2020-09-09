@@ -20,7 +20,9 @@
     "vue": "^2.6.12",
     "vue-loader": "^15.9.3",
     "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.1",
     "webpack-stream": "^6.1.0"
-  }
+  },
+  "dependencies": {}
 }

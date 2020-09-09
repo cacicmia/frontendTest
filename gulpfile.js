@@ -8,12 +8,7 @@ const webpackStream = require('webpack-stream')
 const webpackConfig = require('./webpack.config.js')
 const browserSync = require('browser-sync').create()
 var autoprefixer = require('autoprefixer')
-function html(done) {
-    src('src/*.html')
-    .pipe(dest('dist'))
-    .pipe(browserSync.stream())
-    done()
-}
+
 function assets(done) {
     src('src/assets/**')
     .pipe(dest('dist/assets'))
@@ -47,7 +42,6 @@ function watchTask(done) {
     watch('src/assets/**', series(assets))
     watch('src/js/**', series(scripts))
     watch('src/sass/**', series(styles))
-    watch('src/index.html', series(html))
     done()
 }
 
@@ -56,5 +50,5 @@ exports.watch = watchTask
 exports.scripts = scripts
 exports.styles = styles
 exports.serve = serve
-exports.build = parallel(styles, scripts, assets, html)
+exports.build = parallel(styles, scripts, assets)
 exports.default = series(serve, watchTask)

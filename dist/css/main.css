@@ -1,4 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 body {
-  color: yellow; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column; }
+
+#app.loading {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: #081B2F;
+  background-image: url("./../assets/Notus-Logo-Loading.svg");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.header {
+  position: relative;
+  width: 100%; }
+
+.page-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 20px;
+  color: #ffffff;
+  background-color: transparent;
+  font-family: "Monserrat", sans-serif;
+  z-index: 2; }
+  .page-nav__expansion-container {
+    display: none;
+    height: 100vh;
+    background-color: #F89D36; }
+  .page-nav__menu-control {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer; }
+    .page-nav__menu-control:hover {
+      font-size: calc(20px + 10%); }
+      .page-nav__menu-control:hover .page-nav__menu-icon {
+        font-size: calc(20px + 10%); }
+  .page-nav__menu-icon {
+    vertical-align: sub;
+    font-size: 20px; }
+  .page-nav__menu {
+    list-style-type: none;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: calc(100% - 40px); }
+  .page-nav__nav-item {
+    margin: 12px 0;
+    width: 100%; }
+  .page-nav__nav-link {
+    text-align: center;
+    display: block;
+    padding: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: inherit; }
+    .page-nav__nav-link:hover {
+      color: #42BEB2; }
+
+.block {
+  width: 100%; }
+  .block__content {
+    margin: 0 auto;
+    max-width: 1230px;
+    text-align: center; }
+    .block__content h2 {
+      font-size: 60px;
+      font-family: "Monserrat", sans-serif;
+      font-weight: 700; }
+  .block__text {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 50px 0; }
+    .block__text p {
+      font-size: 18px;
+      font-family: "Monserrat", sans-serif;
+      color: #5C5C5C;
+      margin-bottom: 10px; }
+    .block__text b {
+      color: #42BEB2;
+      font-family: "Monserrat", sans-serif;
+      line-height: 30px; }
+    .block__text--task5 {
+      padding: 100px 0; }
+  .block--white {
+    padding: 100px 0; }
+
+.btn {
+  border: none;
+  border-radius: 0;
+  font-family: "Monserrat", sans-serif; }
+  .btn--primary {
+    background-color: #ffffff;
+    color: #000000;
+    border: 5px solid #F89D36;
+    height: 120px;
+    max-width: 300px;
+    width: 100%; }
+    .btn--primary:not([disabled]):hover {
+      background-color: #F89D36; }
+
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  height: 200px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Monserrat", sans-serif; }
+  .footer__content {
+    position: absolute;
+    top: -50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #42BEB2;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100px;
+    width: 100%;
+    max-width: 1200px; }
+  .footer__logo {
+    height: 50px; }
 
 /*# sourceMappingURL=main.css.map */

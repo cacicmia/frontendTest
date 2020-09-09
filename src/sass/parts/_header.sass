@@ -1,0 +1,61 @@
+.header
+    position: relative
+    width: 100%
+    
+.page-nav
+    position: absolute
+    top: 0
+    left: 0
+    padding: 15px 20px
+    color: $white
+    background-color: transparent
+    font-family: $font
+    z-index: 2
+    &__expansion-container
+        display: none
+        height: 100vh
+        background-color: $primary
+    &__menu-control
+        padding: 10px
+        font-size: 16px
+        cursor: pointer
+        &:hover
+            font-size: calc(20px + 10%)
+            .page-nav__menu-icon
+                font-size: calc(20px + 10%)
+    &__menu-icon
+        vertical-align: sub
+        font-size: 20px
+        
+
+    &__menu
+        list-style-type: none
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        width: calc(100% - 40px)
+    &__nav-item
+        margin: 12px 0
+        width: 100%
+    &__nav-link
+        text-align: center
+        display: block
+        padding: 10px
+        font-size: 30px
+        text-decoration: none
+        color: inherit
+        &:hover
+            color: $secondary
+
+    // &--opened
+    //     width: 100%
+    //     display: block
+    //     background-color: $menu-black
+    //     z-index: 3
+
+        .page-nav__expansion-container
+            display: block
+            
+        .page-nav__menu-open
+        #menu-open
+            display: none
