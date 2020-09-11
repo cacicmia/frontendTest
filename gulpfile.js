@@ -9,11 +9,11 @@ const webpackConfig = require('./webpack.config.js')
 const browserSync = require('browser-sync').create()
 var autoprefixer = require('autoprefixer')
 
-function assets(done) {
-    src('src/assets/**')
-    .pipe(dest('dist/assets'))
-    done()
-}
+// function assets(done) {
+//     src('src/assets/**')
+//     .pipe(dest('dist/assets'))
+//     done()
+// }
 function styles(done) {
     src('src/sass/main.sass')
     .pipe(sourcemaps.init())
@@ -34,12 +34,12 @@ function scripts(done) {
 }
 function serve(done) {
     browserSync.init({
-        server: 'dist'
+        server: './'
     }, done)
 }
 
 function watchTask(done) {
-    watch('src/assets/**', series(assets))
+    // watch('src/assets/**', series(assets))
     watch('src/js/**', series(scripts))
     watch('src/sass/**', series(styles))
     done()
@@ -50,5 +50,5 @@ exports.watch = watchTask
 exports.scripts = scripts
 exports.styles = styles
 exports.serve = serve
-exports.build = parallel(styles, scripts, assets)
+exports.build = parallel(styles, scripts)
 exports.default = series(serve, watchTask)

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import LogoFooter from './../../assets/Notus-Logo-Footer.svg'
+import LogoFooter from '../../../assets/Notus-Logo-Footer.svg'
 export default {
     components: {
         LogoFooter

@@ -1,5 +1,5 @@
 <template>
-  <div class="block block--white">
+  <section class="block block--white">
       <div class="block__content">
           <h2>Task 5</h2>
           <div class="block__text block__text--task5">
@@ -12,7 +12,7 @@
           <button class="btn btn--primary">Hover to have a solid fill</button>
       </div>
 
-  </div>
+  </section>
 </template>
 
 <script>
