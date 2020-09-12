@@ -1,7 +1,39 @@
 .slider
     height: 750px
-    padding: 100px 0
+    padding: 100px 100px
     &__image-container
         width: 330px!important
         height: 100%
-       
+    .slick-slider
+        // .slick-slide
+        //     width: 100%!important
+        .slick-arrow 
+            position: absolute
+            z-index: 5
+            bottom: 100px
+            display: flex
+            align-items: center
+            top: 50%
+            transform: translateY(-50%)
+            &.slick-prev
+                transform: translateY(-50%)
+                left: -100px
+                .icon-prev
+                    width: 30px
+                    height: 30px
+                    background-image:  url('#{$assets}arrow.svg')
+                    transform: rotate(180deg)
+                .slide-count
+                    font-family: $font
+                    color: $white
+                    opacity: .6
+                    padding: 0 30px
+                    vertical-align: middle
+
+            &.slick-next
+                transform: translateY(-50%)
+                right: -100px
+                .icon-next
+                    width: 30px
+                    height: 30px
+                    background-image:  url('#{$assets}arrow.svg')

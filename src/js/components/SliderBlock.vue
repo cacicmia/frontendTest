@@ -1,16 +1,25 @@
 <template>
     <section class="block block--dark">
-      <div class="block__content">
+      <div class="block__content" id="task-4">
           <h2 class="block__heading">Task 4</h2>
           <div class="slider">
-            <VueSlickCarousel :settings="settings" >
+            <VueSlickCarousel :slidesToShow="settings.slidesToShow" >
               
               <div class="slider__image-container" :key="slide.alt" v-for="slide in slides"   
               >
                 <!-- :class="slide.class" -->
                 <img :src="slide.url" :alt="slide.alt">
                 </div>
-                  
+                <template #prevArrow>
+                <div>
+                    <div class="icon-prev"></div>
+                </div>
+            </template> 
+            <template #nextArrow>
+                <div>
+                    <div class="icon-next"></div>
+                </div>
+            </template>     
               
               </VueSlickCarousel>
             </div>
@@ -32,24 +41,8 @@ export default {
     settings: {
       type: Object,
       default: ()=> ({
-        dots: true,
-        arrows: true,
-        dotsClass: "slick-dots custom-dot-class",
-        // "edgeFriction": 0.35,
-        // "infinite": false,
-        // "speed": 500,
         slidesToShow: 3,
-        // adaptiveHeight: true,
-        // slidesToScroll: 3,
-        //  responsive: [
-        //         {
-        //             breakpoint: 768,
-        //             settings: {
-        //                 prevArrow: null,
-        //                 nextArrow: null
-        //             }
-        //         }
-        //     ]
+
       })
     },
     slides:{

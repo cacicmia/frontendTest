@@ -1,23 +1,23 @@
 <template>
   <section class="hero-slider">
-      <VueSlickCarousel :settings="settings" >
+      <VueSlickCarousel>
               
         <div class="hero-slider__image-container" :key="slide.alt" v-for="slide in slides">
         
             <img :src="slide.url" :alt="slide.alt">
         </div>
-          <template #prevArrow="arrowOption">
-            <div>
-                <div class="icon-prev"></div>
-                <div class="slide-count">
-                {{ arrowOption.currentSlide +1 }} / {{ arrowOption.slideCount }}
+            <template #prevArrow="arrowOption">
+                <div>
+                    <div class="icon-prev"></div>
+                    <div class="slide-count">
+                    {{ arrowOption.currentSlide +1 }} / {{ arrowOption.slideCount }}
+                    </div>
                 </div>
-            </div>
             </template> 
-             <template #nextArrow>
-            <div>
-                <div class="icon-next"></div>
-            </div>
+            <template #nextArrow>
+                <div>
+                    <div class="icon-next"></div>
+                </div>
             </template> 
         </VueSlickCarousel>
         <div class="hero-slider__heading-container">
@@ -44,21 +44,7 @@ export default {
         dots: true,
         arrows: true,
         dotsClass: "slick-dots custom-dot-class",
-        // "edgeFriction": 0.35,
-        // "infinite": false,
-        "speed": 500,
-        slidesToShow: 3,
-        // adaptiveHeight: true,
-        // slidesToScroll: 3,
-        //  responsive: [
-        //         {
-        //             breakpoint: 768,
-        //             settings: {
-        //                 prevArrow: null,
-        //                 nextArrow: null
-        //             }
-        //         }
-        //     ]
+       
       })
     },
     slides:{

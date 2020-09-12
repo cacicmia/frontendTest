@@ -4,58 +4,61 @@
     
 .page-nav
     position: absolute
-    top: 0
-    left: 0
-    padding: 15px 20px
+    z-index: 10
     color: $white
     background-color: transparent
     font-family: $font
-    z-index: 2
+    z-index: 10
     &__expansion-container
-        display: none
         height: 100vh
+        width: 100vw
         background-color: $primary
+        overflow-y: hidden
+        display: flex
+        flex-flow: column
+        position: fixed
+
     &__menu-control
+        margin-top: 90px
+        margin-left: 90px  
         padding: 10px
-        font-size: 16px
+        font-size: 12px
         cursor: pointer
-        &:hover
-            font-size: calc(20px + 10%)
-            .page-nav__menu-icon
-                font-size: calc(20px + 10%)
+        display: flex
+        flex-flow: column
+        color: $white
+        font-family: $font
+        span 
+           margin-bottom: 20px 
+
     &__menu-icon
         vertical-align: sub
         font-size: 20px
-        
-
+    &__text
+        margin-left: 250px
+        margin-bottom: 50px
+        color: $dark
+        font-family: $font
     &__menu
         list-style-type: none
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        width: calc(100% - 40px)
+        margin-left: 250px
     &__nav-item
-        margin: 12px 0
+        margin: 15px 0
         width: 100%
     &__nav-link
-        text-align: center
+        text-align: left
         display: block
-        padding: 10px
-        font-size: 30px
+        font-size: 60px
         text-decoration: none
         color: inherit
+        text-transform: uppercase
+        @include font-bold
         &:hover
             color: $secondary
+    &__logo-container
+        position: absolute
+        top: 100px
+        left: 50%
+        transform: translateX(-50%)
 
-    // &--opened
-    //     width: 100%
-    //     display: block
-    //     background-color: $menu-black
-    //     z-index: 3
-
-        .page-nav__expansion-container
-            display: block
-            
-        .page-nav__menu-open
-        #menu-open
-            display: none
+    

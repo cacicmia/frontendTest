@@ -23,6 +23,18 @@ body {
   background-image: url("./../../assets/Notus-Logo-Loading.svg");
   background-position: center;
   background-repeat: no-repeat; }
+  #app.loading .loading__text {
+    color: #ffffff;
+    font-family: "Monserrat", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    top: calc(50% + 210px);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin: auto; }
 
 .header {
   position: relative;
@@ -30,47 +42,72 @@ body {
 
 .page-nav {
   position: absolute;
-  top: 0;
-  left: 0;
-  padding: 15px 20px;
+  z-index: 10;
   color: #ffffff;
   background-color: transparent;
   font-family: "Monserrat", sans-serif;
-  z-index: 2; }
+  z-index: 10; }
   .page-nav__expansion-container {
-    display: none;
     height: 100vh;
-    background-color: #F89D36; }
+    width: 100vw;
+    background-color: #F89D36;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    position: fixed; }
   .page-nav__menu-control {
+    margin-top: 90px;
+    margin-left: 90px;
     padding: 10px;
-    font-size: 16px;
-    cursor: pointer; }
-    .page-nav__menu-control:hover {
-      font-size: calc(20px + 10%); }
-      .page-nav__menu-control:hover .page-nav__menu-icon {
-        font-size: calc(20px + 10%); }
+    font-size: 12px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    color: #ffffff;
+    font-family: "Monserrat", sans-serif; }
+    .page-nav__menu-control span {
+      margin-bottom: 20px; }
   .page-nav__menu-icon {
     vertical-align: sub;
     font-size: 20px; }
+  .page-nav__text {
+    margin-left: 250px;
+    margin-bottom: 50px;
+    color: #081B2F;
+    font-family: "Monserrat", sans-serif; }
   .page-nav__menu {
     list-style-type: none;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    width: calc(100% - 40px); }
+    margin-left: 250px; }
   .page-nav__nav-item {
-    margin: 12px 0;
+    margin: 15px 0;
     width: 100%; }
   .page-nav__nav-link {
-    text-align: center;
+    text-align: left;
     display: block;
-    padding: 10px;
-    font-size: 30px;
+    font-size: 60px;
     text-decoration: none;
-    color: inherit; }
+    color: inherit;
+    text-transform: uppercase;
+    font-family: "Monserrat", sans-serif;
+    font-weight: bold; }
     .page-nav__nav-link:hover {
       color: #42BEB2; }
+  .page-nav__logo-container {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
 
 .block {
   width: 100%; }
@@ -210,10 +247,47 @@ body {
 
 .slider {
   height: 750px;
-  padding: 100px 0; }
+  padding: 100px 100px; }
   .slider__image-container {
     width: 330px !important;
     height: 100%; }
+  .slider .slick-slider .slick-arrow {
+    position: absolute;
+    z-index: 5;
+    bottom: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    .slider .slick-slider .slick-arrow.slick-prev {
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      left: -100px; }
+      .slider .slick-slider .slick-arrow.slick-prev .icon-prev {
+        width: 30px;
+        height: 30px;
+        background-image: url("./../../assets/arrow.svg");
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg); }
+      .slider .slick-slider .slick-arrow.slick-prev .slide-count {
+        font-family: "Monserrat", sans-serif;
+        color: #ffffff;
+        opacity: .6;
+        padding: 0 30px;
+        vertical-align: middle; }
+    .slider .slick-slider .slick-arrow.slick-next {
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      right: -100px; }
+      .slider .slick-slider .slick-arrow.slick-next .icon-next {
+        width: 30px;
+        height: 30px;
+        background-image: url("./../../assets/arrow.svg"); }
 
 .btn {
   border: none;
