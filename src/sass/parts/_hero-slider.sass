@@ -1,0 +1,65 @@
+.hero-slider
+    width: 100%
+    position: relative
+    &__image-container
+        background-color: $dark
+        img
+            opacity: .3
+            width: 100%
+    &__heading-container
+        color: $white
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        z-index: 5
+        padding: 100px 30px 0
+        height: calc(100% - 200px)
+        display: inline-flex
+        flex-flow: column
+        justify-content: center
+        align-items: center
+        font-family: $font
+        svg 
+            flex: 1
+              
+    &__heading
+        @include font-bold
+        font-size: 60px
+
+    &__description
+        font-size: 18px
+        line-height: 30px
+        margin: 50px
+
+    .slick-slider
+        .slick-arrow 
+            position: absolute
+            z-index: 5
+            bottom: 100px
+            display: flex
+            align-items: center
+            &.slick-prev
+                transform: translateY(-50%)
+                left: calc(50% - 76px)
+                .icon-prev
+                    width: 30px
+                    height: 30px
+                    background-image:  url('#{$assets}arrow.svg')
+                    transform: rotate(180deg)
+                .slide-count
+                    font-family: $font
+                    color: $white
+                    opacity: .6
+                    padding: 0 30px
+                    vertical-align: middle
+
+            &.slick-next
+                transform: translateY(-50%)
+                left: calc(50% + 46px)
+                .icon-next
+                    width: 30px
+                    height: 30px
+                    background-image:  url('#{$assets}arrow.svg')
+       
+               

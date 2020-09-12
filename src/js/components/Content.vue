@@ -1,23 +1,26 @@
 <template>
     <div>
-        <staticGallery/>
-        <sliderBlock/>
-        <mapBlock/>
-        <textBlock/>
+        <HeroSlider/>
+        <StaticGallery/>
+        <SliderBlock/>
+        <MapBlock/>
+        <TextBlock/>
     </div>
 </template>
 
 <script>
-import staticGallery from './staticGallery.vue'
-import sliderBlock from './sliderBlock.vue'
-import mapBlock from './mapBlock.vue'
-import textBlock from './textBlock.vue'
+import HeroSlider from './HeroSlider.vue'
+import StaticGallery from './StaticGallery.vue'
+import SliderBlock from './SliderBlock.vue'
+import MapBlock from './MapBlock.vue'
+import TextBlock from './TextBlock.vue'
 export default {
     components: {
-        mapBlock,
-        textBlock,
-        sliderBlock,
-        staticGallery
+        HeroSlider,
+        MapBlock,
+        TextBlock,
+        SliderBlock,
+        StaticGallery
     }
 }
 </script>

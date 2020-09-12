@@ -1,7 +1,7 @@
 <template>
   <section class="block block--white">
       <div class="block__content">
-          <h2>Task 5</h2>
+          <h2 class="block__heading">Task 5</h2>
           <div class="block__text block__text--task5">
               <p>Quas enim kakaw Graeci appellant, vitia malo quam malitias nominare. Idem adhuc; Idemque diviserunt naturam hominis in animum et corpus. Istam voluptatem, inquit, Epicurus ignorat? Duo enim genera quae erant, fecit tria. 
               </p>

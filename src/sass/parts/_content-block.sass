@@ -9,6 +9,9 @@
             font-family: $font
             font-weight: 700
             padding-top: 50px
+    &__heading
+        @include font-bold
+        font-size: 60px 
     &__text
         margin: 0 auto
         max-width: 960px
@@ -34,4 +37,7 @@
         background-color: $dark
         h2 
             color: $white
+    @media (max-width: $m)
+        padding-left: 15px
+        padding-right: 15px
     
