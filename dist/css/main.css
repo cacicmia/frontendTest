@@ -107,6 +107,9 @@ body {
         margin-left: auto;
         margin-right: auto;
         padding-top: 130px; } }
+    @media (max-width: 768px) {
+      .page-nav__menu {
+        padding-top: 150px; } }
   .page-nav__nav-item {
     margin: 15px 0;
     width: 100%; }
