@@ -2,7 +2,7 @@
     <header class="header">
         <nav class="page-nav" id="page-navigation">
             <div class="page-nav__expansion-container" v-show="active">
-                <a class="page-nav__menu-control" id="menu-close" @click="active=false" >
+                <a class="page-nav__menu-control" id="menu-close" @click="closeMenu" >
                     <span>Close</span>
                     <MenuClose/>
                 </a>
@@ -22,7 +22,7 @@
                     <Logo/>
                 </div>
             </div>
-            <a class="page-nav__menu-control" id="menu-open" @click="active = true" v-show="!active">
+            <a class="page-nav__menu-control" id="menu-open" @click="openMenu" v-show="!active">
                 <span>Menu</span>
                 <Menu/>
 
@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import Menu from '../../../assets/notus-meni.svg'
 import MenuClose from '../../../assets/notus-meni-close.svg'
 import Logo from '../../../assets/notus-logo-meni.svg'
@@ -51,6 +52,15 @@ export default {
         }
     },
     methods: {
+        openMenu() {
+            this.active = true
+            disableBodyScroll()
+
+        },
+        closeMenu() {
+            this.active = false
+            enableBodyScroll()
+        }
 
     }
 
