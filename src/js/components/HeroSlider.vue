@@ -53,15 +53,15 @@ export default {
         type: Object,
         default: ()=> ({
           slide1: {
-            url: '/assets/task1_img1.jpg',
+            url: '/assets/task1-img1.jpg',
             alt: 'img1',
           },
           slide2: {
-            url: '/assets/task1_img2.jpg',
+            url: '/assets/task1-img2.jpg',
             alt: 'img2',
           },
           slide3: {
-            url: '/assets/task1_img3.jpg',
+            url: '/assets/task1-img3.jpg',
             alt: 'img3' ,
           },
          

@@ -25,14 +25,14 @@ props: {
     img1:{
         type: Object,
         default: ()=> ({
-            url: '/assets/task2_img1.jpg',
+            url: '/assets/task2-img1.jpg',
             alt: 'img1' 
         }) 
     },
     img2:{
         type: Object,
         default: ()=> ({
-            url: '/assets/task2_img2.jpg',
+            url: '/assets/task2-img2.jpg',
             alt: 'img2' 
         }) ,
          
@@ -40,7 +40,7 @@ props: {
     img3:{
         type: Object,
          default: ()=> ({
-            url: '/assets/task2_img3.jpg',
+            url: '/assets/task2-img3.jpg',
             alt: 'img3' 
         }) ,
        
@@ -48,7 +48,7 @@ props: {
     img4:{
         type: Object,
         default: ()=> ({
-            url: '/assets/task2_img4.jpg',
+            url: '/assets/task2-img4.jpg',
             alt: 'img4' 
     }) ,
     } ,
