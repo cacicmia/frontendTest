@@ -4,3 +4,20 @@
 @mixin font-bold
     font-family: $font
     font-weight: bold
+@mixin large-only
+  	@media (min-width:$m) and (max-width: $l)
+     	@content
+@mixin large
+	@media (max-width: $l)
+		@content
+
+@mixin medium-only
+	@media (min-width: $s) and (max-width: $m)	
+		@content
+@mixin medium
+	@media (max-width: $m)	
+		@content
+
+@mixin small
+	@media (max-width: $s)
+		@content

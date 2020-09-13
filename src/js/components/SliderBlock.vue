@@ -3,7 +3,7 @@
       <div class="block__content" id="task-4">
           <h2 class="block__heading">Task 4</h2>
           <div class="slider">
-            <VueSlickCarousel :slidesToShow="settings.slidesToShow" >
+            <VueSlickCarousel :slidesToShow="settings.slidesToShow" :responsive="settings.responsive" >
               
               <div class="slider__image-container" :key="slide.alt" v-for="slide in slides"   
               >
@@ -42,7 +42,20 @@ export default {
       type: Object,
       default: ()=> ({
         slidesToShow: 3,
-
+        responsive: [
+          {
+            breakpoint: 1280,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
       })
     },
     slides:{

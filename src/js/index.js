@@ -4,4 +4,4 @@ setTimeout(function(){
     new Vue({
         render: h => h(App)
     }).$mount('#app')
-}, 100000)
+}, 1000)
