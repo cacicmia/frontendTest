@@ -1,5 +1,6 @@
 .block
     width: 100%
+    padding: 6.25rem 0
     &__content
         margin: 0 auto
         max-width: 1230px
@@ -8,14 +9,27 @@
             font-size: $heading-size
             font-family: $font
             font-weight: 700
-            padding-top: 50px
     &__heading
         @include font-bold
         font-size: $heading-size 
+    &__ornament
+        width: 100%
+        z-index: 2
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 6.25rem
+        span
+            height: 3px
+            width: 12.5rem
+            background-color: $dark
+            transform: rotate(90deg) translateX(-50%)
+
+
     &__text
         margin: 0 auto
         max-width: 960px
-        padding: 50px 0
+        padding: 3.125rem 0
         p 
             font-size: $paragraph-size
             font-family: $font
@@ -29,8 +43,7 @@
             line-height: 30px
             font-size: $paragraph-size
 
-    &--white
-        padding: 100px 0
+        
     &--dark
         background-color: $dark
         h2 

@@ -6,9 +6,8 @@
                     <span>Close</span>
                     <MenuClose/>
                 </a>
-                <p class="page-nav__text">Task 6 - Menu</p>
                 <ul class="page-nav__menu">
-                  
+                    <li class="page-nav__text">Task 6 - Menu</li>
                     <li class="page-nav__nav-item">
                         <a href="#task-3" class="page-nav__nav-link" @click="active=false">Task 3</a>
                     </li>

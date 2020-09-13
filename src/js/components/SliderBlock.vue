@@ -52,7 +52,14 @@ export default {
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 1
+              slidesToShow: 1,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              slidesToShow: 1,
             }
           }
         ]

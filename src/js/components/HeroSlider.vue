@@ -20,10 +20,12 @@
                 </div>
             </template> 
         </VueSlickCarousel>
-        <div class="hero-slider__heading-container">
+        <div class="hero-slider__absolute-container">
             <MainLogo/>
-            <h1 class="hero-slider__heading">Notus Front-end test</h1>
-            <p class="hero-slider__description">Task 2 - Slider</p>
+            <div class="hero-slider__heading-container">
+              <h1 class="hero-slider__heading">Notus Front-end test</h1>
+              <p class="hero-slider__description">Task 2 - Slider</p>
+            </div>
 
         </div>
   </section>

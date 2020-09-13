@@ -11,13 +11,13 @@
 	@media (max-width: $l)
 		@content
 
-@mixin medium-only
-	@media (min-width: $s) and (max-width: $m)	
-		@content
 @mixin medium
 	@media (max-width: $m)	
 		@content
 
 @mixin small
 	@media (max-width: $s)
+		@content
+@mixin Xsmall
+	@media (max-width: $xs)
 		@content

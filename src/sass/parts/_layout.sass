@@ -2,10 +2,15 @@
     padding: 0
     margin: 0
     box-sizing: border-box 
-
+html
+    @include medium 
+        font-size: 14px
+    @include small
+        font-size: 12px
 body
     display: flex
     flex-flow: column
+    
 #app
     &.loading
         width: 100vw
