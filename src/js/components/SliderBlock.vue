@@ -7,18 +7,17 @@
               
               <div class="slider__image-container" :key="slide.alt" v-for="slide in slides"   
               >
-                <!-- :class="slide.class" -->
                 <img :src="slide.url" :alt="slide.alt">
                 </div>
-                <template #prevArrow>
-                <div>
-                    <div class="icon-prev"></div>
-                </div>
+            <template #prevArrow>
+              <div>
+                  <div class="icon-prev"></div>
+              </div>
             </template> 
             <template #nextArrow>
-                <div>
-                    <div class="icon-next"></div>
-                </div>
+              <div>
+                  <div class="icon-next"></div>
+              </div>
             </template>     
               
               </VueSlickCarousel>
@@ -31,7 +30,6 @@
 
 <script>
 import VueSlickCarousel from 'vue-slick-carousel'
-// import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 
 export default {
   components: {
@@ -69,19 +67,19 @@ export default {
         type: Object,
         default: ()=> ({
           slide1: {
-            url: '/assets/task3-img1.jpg',
+            url: './assets/task3-img1.jpg',
             alt: 'img1'
           },
           slide2: {
-            url: '/assets/task3-img2.jpg',
+            url: './assets/task3-img2.jpg',
             alt: 'img2'
           },
           slide3: {
-            url: '/assets/task3-img3.jpg',
+            url: './assets/task3-img3.jpg',
             alt: 'img3'
           },
           slide4: {
-            url: '/assets/task3-img4.jpg',
+            url: './assets/task3-img4.jpg',
             alt: 'img4'
           }
            

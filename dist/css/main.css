@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-@import url(/node_modules/vue-slick-carousel/dist/vue-slick-carousel.css);
+@import url(./../../node_modules/vue-slick-carousel/dist/vue-slick-carousel.css);
 * {
   padding: 0;
   margin: 0;
