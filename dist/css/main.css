@@ -107,7 +107,7 @@ body {
       -ms-flex-flow: column;
           flex-flow: column; }
 
-#app.loading {
+.loading {
   width: 100vw;
   height: 100vh;
   overflow-y: hidden;
@@ -115,7 +115,7 @@ body {
   background-image: url("./../../assets/Notus-Logo-Loading.svg");
   background-position: center;
   background-repeat: no-repeat; }
-  #app.loading .loading__text {
+  .loading__text {
     color: #ffffff;
     font-family: "Monserrat", sans-serif;
     font-size: 18px;
@@ -214,6 +214,9 @@ body {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
+    @media (max-width: 768px) {
+      .page-nav__logo-container {
+        top: 5.125rem; } }
 
 .block {
   width: 100%;
@@ -335,7 +338,8 @@ body {
   width: 100%;
   position: relative;
   margin-bottom: 3.125rem;
-  height: 100vh; }
+  height: 100vh;
+  background-color: #081B2F; }
   .hero-slider__image-container {
     background-color: #081B2F;
     width: 100%;
@@ -375,7 +379,7 @@ body {
     font-family: "Monserrat", sans-serif; }
     @media (max-width: 768px) {
       .hero-slider__absolute-container {
-        padding: 6.25rem 15px 0; } }
+        padding: 5.125rem 15px 0; } }
   .hero-slider__heading-container {
     display: -webkit-box;
     display: -ms-flexbox;

@@ -7,7 +7,7 @@
               
               <div class="slider__image-container" :key="slide.alt" v-for="slide in slides"   
               >
-                <img :src="slide.url" :alt="slide.alt">
+                <img :src="slide.url" :alt="slide.alt" @load="notifyInit">
                 </div>
             <template #prevArrow>
               <div>
@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import EventBus from '../event-bus';
+
 import VueSlickCarousel from 'vue-slick-carousel'
 
 export default {
@@ -85,8 +87,22 @@ export default {
            
         }) 
     },
-    
+ 
 
+  },
+  methods: {
+    notifyInit(){
+      if (this.flag){
+        return
+      }
+      this.flag= true
+      EventBus.$emit('init');
+    }
+  },
+  data(){
+    return{
+      flag: false
+    }
   }
 }
 </script>
