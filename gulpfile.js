@@ -9,11 +9,7 @@ const webpackConfig = require('./webpack.config.js')
 const browserSync = require('browser-sync').create()
 var autoprefixer = require('autoprefixer')
 
-// function assets(done) {
-//     src('src/assets/**')
-//     .pipe(dest('dist/assets'))
-//     done()
-// }
+
 function styles(done) {
     src('src/sass/main.sass')
     .pipe(sourcemaps.init())
